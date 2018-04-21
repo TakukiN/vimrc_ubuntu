@@ -15,6 +15,10 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'tomtom/tcomment_vim'
 NeoBundle "ctrlpvim/ctrlp.vim"
 NeoBundle 'rking/ag.vim'
+NeoBundle 'vim-scripts/taglist.vim'
+NeoBundle 'szw/vim-tags'
+
+NeoBundle 'severin-lemaignan/vim-minimap'
 
 call neobundle#end()
 
@@ -78,6 +82,17 @@ if executable('ag')
   let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
   let g:unite_source_grep_recursive_opt = ''
 endif
+if executable('hw')
+  let g:unite_source_grep_command = 'hw'
+  let g:unite_source_grep_default_opts = '--nogroup --nocolor --column'
+  let g:unite_source_grep_recursive_opt = ''
+endif
+
+set tags = tags
+let Tlist_Ctags_Cmd = "/usr/bin/ctags"
+let Tlist_Show_One_File = 1
+let Tlist_Use_Right_Window = 0
+let Tlist_Exit_OnlyWindow = 1
 
 
 
