@@ -18,6 +18,9 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'vim-scripts/taglist.vim'
 NeoBundle 'szw/vim-tags'
 
+NeoBundle 'open-browser.vim'
+
+
 NeoBundle 'severin-lemaignan/vim-minimap'
 
 call neobundle#end()
@@ -94,5 +97,8 @@ let Tlist_Show_One_File = 1
 let Tlist_Use_Right_Window = 0
 let Tlist_Exit_OnlyWindow = 1
 
+let mapleader = "\<Space>"
+
+nmap <Leader>b <Plug>(openbrowser-search)
 
 
